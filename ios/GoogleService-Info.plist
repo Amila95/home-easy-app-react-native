@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>739814914993-30123u7f4u0tgfbn04bbvu7uk9q08j6m.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.739814914993-30123u7f4u0tgfbn04bbvu7uk9q08j6m</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC8_BljYyBHpfzCaWoPnOEeRD9PHQHZfLU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>739814914993</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>org.reactjs.native.example.Lkiea</string>
+	<key>PROJECT_ID</key>
+	<string>lkiea-35e68</string>
+	<key>STORAGE_BUCKET</key>
+	<string>lkiea-35e68.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:739814914993:ios:4e674d7fc59d0391a09b90</string>
+</dict>
+</plist>
