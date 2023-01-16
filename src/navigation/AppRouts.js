@@ -5,6 +5,12 @@ import auth from '@react-native-firebase/auth';
 import { NavigationContainer } from "@react-navigation/native";
 import AuthStack from './AuthStack';
   import AppStack from './AppStack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+const Drawer = createDrawerNavigator();
+import HomeScreen from '../screens/HomeScreen';
+
+
+
 
 
 const AppRouts = () => {
@@ -25,7 +31,18 @@ const AppRouts = () => {
 
     return(
         <NavigationContainer>
+            {/* <Drawer.Navigator initialRouteName="Home"> */}
+
             {user? <AppStack/>: <AuthStack/>}
+
+           {/* <Drawer.Navigator initialRouteName="Home"> <Drawer.Screen name="Home" component={HomeScreen} /> </Drawer.Navigator> */}
+
+                {/* </Drawer.Navigator> */}
+        {/* <Drawer.Navigator initialRouteName="Home">
+        <Drawer.Screen name="Home" component={AppStack} />
+        <Drawer.Screen name="Notifications" component={NotificationsScreen} />
+      </Drawer.Navigator> */}
+
         </NavigationContainer>
     )
     

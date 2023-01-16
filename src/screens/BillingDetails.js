@@ -79,6 +79,9 @@ const BillingDetails = ({route}) => {
           title={item.data().value}
            description={item.data().date}
           left={props => <List.Icon {...props} icon="receipt" />}
+          titleStyle={{color: isDarkMode ? Colors.lighter : Colors.darker}}
+          descriptionStyle={{color: isDarkMode ? Colors.lighter : Colors.darker}}
+
           // right={props => <List.Icon {...props} icon="selection-remove" /> }
           // onPress={()=>clickItem(item.id)}
         //   onPress={()=>navigation.navigate('BillingDetails',{msg:item.data().billName})} 

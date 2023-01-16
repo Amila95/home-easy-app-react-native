@@ -10,7 +10,7 @@ const Stack = createNativeStackNavigator();
 const BillingHistoryStack = () => {
     return (
         <Stack.Navigator >
-        <Stack.Screen name='History' component={HistoryScreen} options={{headerShown:false}}/>
+        <Stack.Screen name='BillingHistory' component={HistoryScreen} options={{headerShown:false}}/>
         <Stack.Screen name='BillingDetails' component={BillingDetails} />
        
       </Stack.Navigator>

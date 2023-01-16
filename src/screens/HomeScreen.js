@@ -17,7 +17,7 @@ import {
     Alert,
     FlatList
   } from 'react-native';
-import { List } from 'react-native-paper';
+import { List, TextStyle } from 'react-native-paper';
 import Button from '../components/Button.';
 import InputField from '../components/InputField';
 
@@ -106,13 +106,22 @@ const HomeScreen = () => {
       <Button label={'Add Item'} styleForButton={styles.bottomButtun} styleForText={styles.registerbuttonText} fieldButtonFunction={() => setModalVisible(true)}/>
       <FlatList
         data={itemList}
-        renderItem={({item}) => <List.Item
+        renderItem={({item}) => 
+        <List.Item 
+        
         title={item.data().ItemName}
+        titleStyle={{color: isDarkMode ? Colors.lighter : Colors.darker}}
         description={item.data().Quantity}
+        descriptionStyle={{color: isDarkMode ? Colors.lighter : Colors.darker}}
         left={props => <List.Icon {...props} icon="cart" />}
+        iconStyle={{color: isDarkMode ? Colors.lighter : Colors.darker}}
         // right={props => <List.Icon {...props} icon="selection-remove" /> }
         onPress={()=>clickItem(item.id)}
-      />}
+        
+      />
+      // <Text>{item.data().ItemName}</Text>
+    }
+
       />
   
   <Modal

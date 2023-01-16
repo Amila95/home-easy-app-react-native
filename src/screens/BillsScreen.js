@@ -67,6 +67,20 @@ const BillsScreen = () => {
      });    
   };
 
+  const sumbitItemFrist =() =>{
+    firestore()
+    .collection('Bill')
+    .add({
+      billName: billName,
+      value: value,
+    })
+    .then(() => {
+      loadInitData();
+      setModalVisible(!modalVisible);
+    });
+
+  };
+
   const updateItem =() =>{    
     firestore()
     .collection('Bill')
@@ -123,8 +137,10 @@ const BillsScreen = () => {
       <Button label={'Add New Category'} styleForButton={styles.bottomButtun} styleForText={styles.registerbuttonText} fieldButtonFunction={() => setModalVisible(true)}/>
       <FlatList
         data={itemList}
-        renderItem={({item}) => <List.Item
+        renderItem={({item}) => <List.Item style={textStyle}
         title={item.data().billName}
+        descriptionStyle={{color: isDarkMode ? Colors.lighter : Colors.darker}}
+        titleStyle={{color: isDarkMode ? Colors.lighter : Colors.darker}}
         description={item.data().value}
         left={props => <List.Icon {...props} icon="cash-minus" />}
         // right={props => <List.Icon {...props} icon="selection-remove" /> }
@@ -132,7 +148,7 @@ const BillsScreen = () => {
       />}
       />
   
-  {/* <Modal
+  <Modal
         animationType="slide"
         transparent={true}
         visible={modalVisible}
@@ -149,13 +165,13 @@ const BillsScreen = () => {
         </View>
           <View style={{flexDirection: "row" ,justifyContent: 'center' }}>
           <Button label={'Close'} styleForButton={styles.cancleButtun} styleForText={styles.registerbuttonText} fieldButtonFunction={() => setModalVisible(!modalVisible)}/>
-          <Button label={'Change Amount'} styleForButton={styles.bottomButtun} styleForText={styles.registerbuttonText} fieldButtonFunction={() => sumbitItem()}/>
-          <Button label={'Submit'} styleForButton={styles.bottomButtun} styleForText={styles.registerbuttonText} fieldButtonFunction={() => sumbitItem()}/>
+          {/* <Button label={'Change Amount'} styleForButton={styles.bottomButtun} styleForText={styles.registerbuttonText} fieldButtonFunction={() => sumbitItem()}/> */}
+          <Button label={'Submit'} styleForButton={styles.bottomButtun} styleForText={styles.registerbuttonText} fieldButtonFunction={() => sumbitItemFrist()}/>
 
           </View>
         </View>
         </View>
-      </Modal> */}
+      </Modal>
 
       <Modal
         animationType="slide"

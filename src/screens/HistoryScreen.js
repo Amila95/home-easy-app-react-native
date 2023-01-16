@@ -110,6 +110,8 @@ const HistoryScreen = ({navigation}) => {
         title={item.data().billName}
         // description={item.data().Quantity}
         left={props => <List.Icon {...props} icon="receipt" />}
+        titleStyle={{color: isDarkMode ? Colors.lighter : Colors.darker}}
+
         // right={props => <List.Icon {...props} icon="selection-remove" /> }
         // onPress={()=>clickItem(item.id)}
         onPress={()=>navigation.navigate('BillingDetails',{msg:item.data().billName})} 

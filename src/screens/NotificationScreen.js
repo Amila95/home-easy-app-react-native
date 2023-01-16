@@ -7,7 +7,7 @@ import {
   import { AuthContext } from '../navigation/AuthProvider';
 
 
-const ProfileScreen =() => {
+const NotificationScreen =() => {
     const isDarkMode = useColorScheme() === 'dark';
     const {logout } = useContext(AuthContext);
 
@@ -37,7 +37,7 @@ const ProfileScreen =() => {
     )
 }
 
-export default ProfileScreen;
+export default NotificationScreen;
 
 const styles = StyleSheet.create({
     welcomeTextStyle: {
